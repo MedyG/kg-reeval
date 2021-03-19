@@ -1,5 +1,6 @@
 from helper import *
 
+
 class BaseModel(torch.nn.Module):
 	def __init__(self,  params):
 		super(BaseModel, self).__init__()
@@ -30,6 +31,7 @@ class BaseModel(torch.nn.Module):
 		label_neg	= true_label[1:]
 		loss		= self.bceloss(pred, true_label)
 		return loss
+
 
 class ConvE(BaseModel):
 	def __init__(self,  params):
